@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="PORTFOLIO.css">
+    <script src="https://kit.fontawesome.com/e674bba739.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img class="logo"></img>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fas fa-times"></i>
+                </ul>
+                <i class="fas fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>AWS Cloud & DevOps enthusiast</p>
+                <h1>HELLO ALL, I'M <span>PALLAVI PRIYA</span><br></h1>
+            </div>ḍḍ
+        </div>
+    </div>
+    <!-- ----------ABOUT---------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="IMAGE.avif">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p> A fresher graduate with an optimistic mindset. I believe in my self cofidence and commitment. Iam a quick learner and have strong ethic. 
+                        Exploring for the new fresher job oppurtunities in the field of AWS Cloud, DevOps, Networking and HTML, CSS Domains too. 
+                        </p></p>Currently iam an intern for web-development in codsoft.
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills</p>
+                        <p class="tab-links" onclick="openTab('projects')">Projects</p>
+                        <p class="tab-links" onclick="openTab('qualifications')">Qualifications</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul><li><span> <li><span>AWS Cloud</span><br>amazon web services cloud components like ec2, s3, iam, vpc,cloud formation, cloud trail, cloud watch, elastic beanstalk, load balancer, autoscaling.</li>
+                            <li><span>DevOps&nbsp; tools</span><br>git& github, maven, ansible, apache tomcat, nagios, docker, kubernetes, terraform, linux & Shell scripting</li>
+                            <li><span>Networking skills, HTML & CSS </span><br>Basics of networking, Standard markup language and styles for web development</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="projects">
+                        <ul type="disk">
+                            <li><span>WEB&nbsp; DEVELOPMENT</span><br>Developed and maintained web applications
+                                using HTML5, CSS, and JavaScript.</li>
+                            <li><span>Six months of Hands-on experience in AWS Cloud services and DevOps tools.</span></li><br>
+                            <li><span>PROJECTS</span><br>Creating three tier web architecture in AWS.</li>
+                            <li>Building and hosting wordpress web application with HA and scalability</li>
+                            <li>Personal portfolio, Landing page,Calculator Application</li>
+
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="qualifications">
+                        <ul>
+                            <li><span>SRI KRISHNA DEVARAYA&nbsp;UNIVERSITY</span><br>Bachelor of Pharmacy 2022<br><br>
+                            </li>
+                            <li><span>SRI NANDI JUNIOR COLLEGE </span><br> INTERMEDIATE 2018<br><br>
+                         </li>
+                            <li><span>SRI NAVANANDI HIGH SCHOOL </span><br> SSC 2016<br>
+                            </li>
+                </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------CONTACT---------- -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i> pallavipriya0115@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 8790216062</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/pallavi-priya-b18087224"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1Tzt5QzJN0HnJYch2llhhYgsjXi9CaCM2/view?usp=drive_link" download class="btn btn2">My resume</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn3">submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>by @ PALLAVI PRIYA <i class="fas fa-heart"></i></p>
+        </div>
+    </div>
+    <script>
+        var tabLinks = document.getElementsByClassName('tab-links');
+        var tabContents = document.getElementsByClassName('tab-contents');
+
+        function openTab(tabName) {
+            for (tabLink of tabLinks) {
+                tabLink.classList.remove('active-link');
+            }
+            for (tabContent of tabContents) {
+                tabContent.classList.remove('active-tab');
+            }
+            event.currentTarget.classList.add('active-link');
+            document.getElementById(tabName).classList.add('active-tab');
+        }
+
+        // JavaScript for handling the mobile navigation menu
+        document.querySelector('.fas.fa-bars').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        document.querySelector('.fas.fa-times').addEventListener('click', function () {
+            document.querySelector('nav ul').classList.remove('show');
+        });
+
+    </script>
+</body>
+
+</html>
